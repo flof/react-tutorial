@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -19,6 +18,5 @@ func main() {
 		io.Copy(w, file)
 	})
 
-	fmt.Println("Starte Server")
 	http.ListenAndServe(":3000", nil)
 }
